@@ -1,0 +1,47 @@
+{% extends 'investment/base.html' %}
+{% block content %}
+    <table class="table">
+    <caption>List of Investors</caption>
+    <thead>
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Surname</th>
+        <th scope="col">Given Name</th>
+        <th scope="col">Amount Invested</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for investor in investors %}
+            <tr>
+                <th scope="row">{{ investor.id }}</th>
+                <td>{{ investor.surname }}</td>
+                <td>{{ investor.given_name }}</td>
+                <td>{{ investor.amount_invested }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+
+     <table class="table">
+    <caption>List of Institutions</caption>
+    <thead>
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Institution Name</th>
+        <th scope="col">Business Type</th>
+        <th scope="col">Amount Invested</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for institution in institutions %}
+            <tr>
+                <th scope="row">{{ institution.id }}</th>
+                <td>{{ institution.name }}</td>
+                <td>{{ institution.business_type }}</td>
+                <td>{{ institution.amount_invested }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+{% endblock content %}
+          
