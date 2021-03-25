@@ -37,11 +37,11 @@ class Investor(models.Model):
     kin_note = models.TextField(null=True, blank=True)
 
     # Bank details
-    bank_name = models.CharField(max_length=30)
-    bank_branch = models.CharField(max_length=20)
-    bank_account_number = models.PositiveIntegerField()
-    bank_telephone = models.CharField(max_length=20)
-    bank_email = models.EmailField()
+    bank_name = models.CharField(max_length=30, blank=True, null=True)
+    bank_branch = models.CharField(max_length=20, blank=True, null=True)
+    bank_account_number = models.PositiveIntegerField(blank=True, null=True)
+    bank_telephone = models.CharField(max_length=20, blank=True, null=True)
+    bank_email = models.EmailField(blank=True, null=True)
 
     def __str__(self):
         return f'{self.surname} {self.given_name}'
@@ -90,11 +90,11 @@ class Institution(models.Model):
     join_date = models.DateField(auto_now_add=True)
 
     # Bank details
-    bank_name = models.CharField(max_length=30)
-    bank_branch = models.CharField(max_length=20)
-    bank_account_number = models.PositiveIntegerField()
-    bank_telephone = models.CharField(max_length=20)
-    bank_email = models.EmailField()
+    bank_name = models.CharField(max_length=30, blank=True, null=True)
+    bank_branch = models.CharField(max_length=20, blank=True, null=True)
+    bank_account_number = models.PositiveIntegerField(blank=True, null=True)
+    bank_telephone = models.CharField(max_length=20, blank=True, null=True)
+    bank_email = models.EmailField(blank=True, null=True)
 
     def __str__(self):
         return self.name
