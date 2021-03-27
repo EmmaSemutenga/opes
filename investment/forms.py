@@ -1,5 +1,5 @@
 from django import forms
-from .models import Institution, Investor, Signatory
+from .models import Institution, Investor
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit, Layout, Fieldset, ButtonHolder, HTML, Div, MultiField, Field
 
@@ -111,6 +111,144 @@ class InstitutionForm(forms.ModelForm):
                 Div(
                     Div(
                         Field('bank_email', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    css_class = 'col-md-4'
+                ),
+                css_class = 'row'
+            )
+           ),
+           Fieldset(
+               'Signatory One Particulars',
+                Div(
+                Div(
+                    Div(
+                        Field('signatory_one_surname', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    Div(
+                        Field('signatory_one_given_name', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    Div(
+                        Field('signatory_one_occupation', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    css_class = 'col-md-4'
+
+                ),
+                Div(
+                    Div(
+                        Field('signatory_one_telephone', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    Div(
+                        Field('signatory_one_district', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    css_class = 'col-md-4'
+
+                ),
+                Div(
+                    
+                    Div(
+                        Field('signatory_one_county', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    Div(
+                        Field('signatory_one_sub_county', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    css_class = 'col-md-4'
+                ),
+                css_class = 'row'
+            )
+           ),
+           Fieldset(
+               'Signatory Two Particulars',
+                Div(
+                Div(
+                    Div(
+                        Field('signatory_two_surname', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    Div(
+                        Field('signatory_two_given_name', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    Div(
+                        Field('signatory_two_occupation', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    css_class = 'col-md-4'
+
+                ),
+                Div(
+                    Div(
+                        Field('signatory_two_telephone', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    Div(
+                        Field('signatory_two_district', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    css_class = 'col-md-4'
+
+                ),
+                Div(
+                    
+                    Div(
+                        Field('signatory_two_county', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    Div(
+                        Field('signatory_two_sub_county', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    css_class = 'col-md-4'
+                ),
+                css_class = 'row'
+            )
+           ),
+           Fieldset(
+               'Signatory Three Particulars',
+                Div(
+                Div(
+                    Div(
+                        Field('signatory_three_surname', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    Div(
+                        Field('signatory_three_given_name', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    Div(
+                        Field('signatory_three_occupation', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    css_class = 'col-md-4'
+
+                ),
+                Div(
+                    Div(
+                        Field('signatory_three_telephone', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    Div(
+                        Field('signatory_three_district', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    css_class = 'col-md-4'
+
+                ),
+                Div(
+                    
+                    Div(
+                        Field('signatory_three_county', css_class='form-control'),
+                        css_class = 'form-group'
+                    ),
+                    Div(
+                        Field('signatory_three_sub_county', css_class='form-control'),
                         css_class = 'form-group'
                     ),
                     css_class = 'col-md-4'
@@ -310,6 +448,7 @@ class InvestorForm(forms.ModelForm):
                 css_class = 'row'
             )
            ),
+           
             Submit('submit', 'Submit', css_class='button white')
         )
 
@@ -319,11 +458,11 @@ class InvestorForm(forms.ModelForm):
 #         model = Bank
 #         fields = '__all__'
 
-class SignatoryForm(forms.ModelForm):
+# class SignatoryForm(forms.ModelForm):
     
-    class Meta:
-        model = Signatory
-        fields = '__all__'
+#     class Meta:
+#         model = Signatory
+#         fields = '__all__'
 
 # class NextofkinForm(forms.ModelForm):
     

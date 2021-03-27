@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import InvestorForm, SignatoryForm, InstitutionForm
+from .forms import InvestorForm, InstitutionForm
 from .models import Investor, Institution
 
 # Create your views here.

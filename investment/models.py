@@ -96,22 +96,46 @@ class Institution(models.Model):
     bank_telephone = models.CharField(max_length=20, blank=True, null=True)
     bank_email = models.EmailField(blank=True, null=True)
 
+    signatory_one_surname = models.CharField(max_length=20)
+    signatory_one_given_name = models.CharField(max_length=20)
+    signatory_one_occupation = models.CharField(max_length=20)
+    signatory_one_telephone = models.CharField(max_length=20)
+    signatory_one_district = models.CharField(max_length=20)
+    signatory_one_county = models.CharField(max_length=20)
+    signatory_one_sub_county = models.CharField(max_length=20)
+
+    signatory_two_surname = models.CharField(max_length=20)
+    signatory_two_given_name = models.CharField(max_length=20)
+    signatory_two_occupation = models.CharField(max_length=20)
+    signatory_two_telephone = models.CharField(max_length=20)
+    signatory_two_district = models.CharField(max_length=20)
+    signatory_two_county = models.CharField(max_length=20)
+    signatory_two_sub_county = models.CharField(max_length=20)
+
+    signatory_three_surname = models.CharField(max_length=20)
+    signatory_three_given_name = models.CharField(max_length=20)
+    signatory_three_occupation = models.CharField(max_length=20)
+    signatory_three_telephone = models.CharField(max_length=20)
+    signatory_three_district = models.CharField(max_length=20)
+    signatory_three_county = models.CharField(max_length=20)
+    signatory_three_sub_county = models.CharField(max_length=20)
+
     def __str__(self):
         return self.name
 
 
-class Signatory(models.Model):
-    institution = models.ForeignKey(Institution, on_delete=models.CASCADE)
-    surname = models.CharField(max_length=20)
-    given_name = models.CharField(max_length=20)
-    occupation = models.CharField(max_length=20)
-    telephone = models.CharField(max_length=20)
-    district = models.CharField(max_length=20)
-    county = models.CharField(max_length=20)
-    sub_county = models.CharField(max_length=20)
+# class Signatory(models.Model):
+#     institution = models.ForeignKey(Institution, on_delete=models.CASCADE)
+#     surname = models.CharField(max_length=20)
+#     given_name = models.CharField(max_length=20)
+#     occupation = models.CharField(max_length=20)
+#     telephone = models.CharField(max_length=20)
+#     district = models.CharField(max_length=20)
+#     county = models.CharField(max_length=20)
+#     sub_county = models.CharField(max_length=20)
 
-    def __str__(self):
-        return f'{self.name} {self.given_name}'
+#     def __str__(self):
+#         return f'{self.name} {self.given_name}'
     
     
 
